@@ -1,0 +1,38 @@
+HTTP POST
+
+POST /config-server/app-sources/{app-name}/{profile}/{label}
+
+{
+	"key":"value"
+}
+
+insert into properties (application,profile,label, prop_key,value) values ('client-app','dev','latest','greeting','message')
+
+insert into properties (application,profile,label, prop_key,value) values ('client-app1','dev','latest','greeting','message')
+insert into properties (application,profile,label, prop_key,value) values ('global','dev','latest','greeting1','message')
+//book
+insert into properties (application,profile,label, prop_key,value) values ('client-app','dev','latest','book.title','cloud-native java')
+insert into properties (application,profile,label, prop_key,value) values ('client-app','dev','latest','book.author','Joshlong')
+
+update properties set value = 'message change' where id = 1
+update properties set value = 'Cloud-native Java 4' where id = 3
+
+
+
+select * from properties
+
+//Refresh endpoint
+http POST http://localhost:8889/actuator/refresh
+
+// Get message
+http://localhost:8889/greeting
+
+
+// ENV POST
+
+curl -H "Content-Type: application/json" -X POST -d '{"key":"book.title", "value":"Cloud-native Java 4"}' http://localhost:8889/actuator/env
+
+
+
+010.02.58.001231.0 USD 
+	
