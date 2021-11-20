@@ -166,7 +166,8 @@ public class OkHttpTest {
             Request request = chain.request();
             System.out.println("Request URL:" + request.url() + "=> Method:" + request.method());
             Response response = chain.proceed(request);
-            if (response.isSuccessful()) System.out.println("Response is success full from remote call.");
+            if (response.isSuccessful())
+                System.out.println("Response is success full from remote call.");
             else System.out.println("Error response from remote call with status code" + response.code());
             return response;
         }
