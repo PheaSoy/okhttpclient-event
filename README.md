@@ -5,6 +5,6 @@
     - Custom timeout and event printing
 ## Spring Cloud Gateway 
     - Routing 
-    - Metrics and prometheus
+    - Metrics, prometheus and grafna
 ## Docker Compose 
     - Sample docker-compose.yml
