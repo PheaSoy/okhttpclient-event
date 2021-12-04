@@ -52,16 +52,21 @@ public class TestClientRaceCondition{
 
 
     public static void main(String[] args) throws IOException {
+
         TestClientRaceCondition testClientRaceCondition = new TestClientRaceCondition();
         UserRequest userRequest = new UserRequest();
         userRequest.setCif("154565646");
 
         Runnable runnable1 = () -> testClientRaceCondition.send(userRequest,"d3d37922-e23a-4cf8-a79f-c132d9841089");
+
         Runnable runnable2 = () -> testClientRaceCondition.send(userRequest,"94e9000a-ec4f-4312-89a4-f830b4b5df1f");
 
         ExecutorService executorService = Executors.newFixedThreadPool(10);
+
         executorService.execute(runnable1);
+
         executorService.execute(runnable2);
+
         // 3000
         // T1= 2000, T2 = 2000
 

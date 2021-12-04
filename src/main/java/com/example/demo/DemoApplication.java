@@ -30,5 +30,13 @@ public class DemoApplication {
     @GetMapping("/backend/greeting")
     public String greet() {
         return " book config" + bookConfig.toString();
+
     }
+
+    @PostMapping("/backend/greeting")
+    public String createGreeting() {
+        return " book config" + bookConfig.toString();
+
+    }
+
 }
