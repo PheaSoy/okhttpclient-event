@@ -1,0 +1,17 @@
+{
+	"ulid": "01FP277S4BWKFDH7EKZVD4WF61",
+	"minTime": 1638592517679,
+	"maxTime": 1638597600000,
+	"stats": {
+		"numSamples": 255409,
+		"numSeries": 831,
+		"numChunks": 1022
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01FP277S4BWKFDH7EKZVD4WF61"
+		]
+	},
+	"version": 1
+}

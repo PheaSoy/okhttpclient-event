@@ -22,12 +22,12 @@ public class TestClientRaceCondition{
             .writeTimeout(10, TimeUnit.SECONDS)
             .build();
 
-    String url = "http://10.215.116.196:8080/hattha-service/payments/api/1.0/orders/execute/";
+    String url = "xxxxxxxx";
 
     private final ObjectMapper objectMapper = new ObjectMapper();
     Map<String, String> headermap = Map.of("addInfo3", "12223", "cif", "001000017",
-            "client_id", "3836E5A6E1B040A1A1C62FFCB61B0AA5", "client_secret", "a808c6dfb6080a56453c14ed35232bcb9c719789c766084ecb57804933121f22",
-            "x-api-key", "AC16031A7CB042F6966165EF60DF6185");
+            "client_id", "xxx", "client_secret", "xxxxxxxxxx",
+            "x-api-key", "xxxxx");
 
     void send(UserRequest userRequest,String orderId)  {
         log.info("Sending the request");

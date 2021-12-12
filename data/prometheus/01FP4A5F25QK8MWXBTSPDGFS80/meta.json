@@ -1,0 +1,17 @@
+{
+	"ulid": "01FP4A5F25QK8MWXBTSPDGFS80",
+	"minTime": 1638664103315,
+	"maxTime": 1638669600000,
+	"stats": {
+		"numSamples": 5706,
+		"numSeries": 634,
+		"numChunks": 634
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01FP4A5F25QK8MWXBTSPDGFS80"
+		]
+	},
+	"version": 1
+}
